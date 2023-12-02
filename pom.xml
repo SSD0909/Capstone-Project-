@@ -69,7 +69,7 @@
                     <version>2.19.1</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                         </suiteXmlFiles>
                         <systemPropertyVariables>
                             <propertyName>chrome</propertyName>
