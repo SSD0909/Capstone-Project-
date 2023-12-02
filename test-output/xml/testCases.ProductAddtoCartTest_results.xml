@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="64.589">
+    <properties></properties>
+
+
+
+            <testcase
+                name="RemoveProduct"
+                time="9.486"
+                classname="testCases.ProductAddtoCartTest">
+            </testcase>
+            <testcase
+                name="ProductQuantityChange"
+                time="7.398"
+                classname="testCases.ProductAddtoCartTest">
+            </testcase>
+            <testcase
+                name="ProductPrice"
+                time="23.447"
+                classname="testCases.ProductAddtoCartTest">
+            </testcase>
+            <testcase
+                name="VerifyProductCartPage"
+                time="15.548"
+                classname="testCases.ProductAddtoCartTest">
+            </testcase>
+            <testcase
+                name="ViewCartPage"
+                time="8.710"
+                classname="testCases.ProductAddtoCartTest">
+            </testcase>
+</testsuite>

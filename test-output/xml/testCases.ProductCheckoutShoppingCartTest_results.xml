@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="64.548">
+    <properties></properties>
+
+
+
+            <testcase
+                name="CheckoutProductInCart"
+                time="24.640"
+                classname="testCases.ProductCheckoutShoppingCartTest">
+            </testcase>
+            <testcase
+                name="VerifyProductCartPage"
+                time="39.908"
+                classname="testCases.ProductCheckoutShoppingCartTest">
+            </testcase>
+</testsuite>

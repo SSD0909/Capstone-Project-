@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="30.435">
+    <properties></properties>
+
+
+
+            <testcase
+                name="createAccounWithValidPass"
+                time="7.661"
+                classname="testCases.RegistrationTest">
+            </testcase>
+            <testcase
+                name="createAccounWithExistingUserName"
+                time="4.757"
+                classname="testCases.RegistrationTest">
+            </testcase>
+            <testcase
+                name="createAccountWeakPassword"
+                time="18.017"
+                classname="testCases.RegistrationTest">
+            </testcase>
+</testsuite>
