@@ -32,7 +32,7 @@ public class SelectBrowser {
 	           // ChromeOptions options= new ChromeOptions();
 	    		//options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));
 	    		//options.addArguments("--remote-allow-origins=*");
-			options.setHeadless(false);
+			
 	    		
 	    		// Open browser
 	            ChromeOptions options= new ChromeOptions();
