@@ -97,7 +97,7 @@
           <configuration>
             <forkCount>0</forkCount>
             <suiteXmlFiles>
-              <suiteXmlFile>testng</suiteXmlFile>
+              <suiteXmlFile>testng.xml</suiteXmlFile>
             </suiteXmlFiles>
           </configuration>
         </plugin>
