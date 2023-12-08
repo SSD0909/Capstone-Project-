@@ -110,7 +110,7 @@ public class ProductCheckoutShoppingCartTest {
 							        userLogin.EnterPass("Psssw0rd@#$123452345sfsff");
 							        System.out.println("Password Entered");
 							        Thread.sleep(5000);
-							       actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+							      // actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 							       Thread.sleep(3000);
 							       userLogin.LoginUserClick();
 							       
@@ -128,11 +128,11 @@ public class ProductCheckoutShoppingCartTest {
 						        	
 							    	Thread.sleep(3000);
 							    	productcart.UserHomeClick();
-						        	actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+						        	//actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 						        	Thread.sleep(3000);
 						        	productcart.secondproductClick();
 						        	
-							    	 actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+							    	 //actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 							    	 Thread.sleep(3000);
 							    	 productcart.secondproductAddClick();
 							    	 
@@ -147,7 +147,7 @@ public class ProductCheckoutShoppingCartTest {
 								    	 productcart.viewCartClick();
 								    	 
 								    	 
-								        actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+								       // actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 								        Thread.sleep(3000);
 										checkoutproduct.checkoutClick();
 										
@@ -163,7 +163,7 @@ public class ProductCheckoutShoppingCartTest {
 								        Assert.assertEquals(expectedurl, urlactual);
 										
 										
-										actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+										//actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 										boolean creditcardDisplay=	checkoutproduct.creditcardDisplay();
 										Assert.assertEquals(creditcardDisplay, true);
 											
@@ -239,7 +239,7 @@ public class ProductCheckoutShoppingCartTest {
 									
 									
 									checkoutproduct.iframe();
-									actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+									//actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 									
 									driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 									checkoutproduct.EntercardNumber("4242424242424242");
