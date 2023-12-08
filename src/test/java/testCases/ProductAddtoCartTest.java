@@ -9,7 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interActions;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -35,7 +35,7 @@ import lib.RunReports;
 
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interActions;
 
 
 import org.testng.asserts.SoftAssert;
@@ -90,7 +90,7 @@ public class ProductAddtoCartTest {
 		        try {
 		        	
 		        	test = extent.createTest("ProductPrice_0005", "Test Passed");
-		        	Actions actions= new Actions(driver);
+		        	//Actions actions= new Actions(driver);
 		        	userLogin = new LoginRegisteredUser(driver);
 		        	
 			    	Thread.sleep(3000);
@@ -103,7 +103,7 @@ public class ProductAddtoCartTest {
 			        userLogin.EnterPass("Psssw0rd@#$123452345sfsff");
 			        System.out.println("Password Entered");
 			        
-			       actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+			       //sendKeys(Keys.PAGE_DOWN).build().perform();
 			       Thread.sleep(3000);
 			       userLogin.LoginUserClick();
 			        Thread.sleep(3000);
@@ -133,10 +133,10 @@ public class ProductAddtoCartTest {
 		    	 Assert.assertEquals( productPriceDisplay,true);
 		    	
 		    	 //click on a product
-		    	// actions.sendKeys(Keys.PAGE_UP).build().perform();
+		    	// sendKeys(Keys.PAGE_UP).build().perform();
 		    	//productcart.UserHomeClick();
 		    	Thread.sleep(3000);
-		    	actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+		    	//sendKeys(Keys.PAGE_DOWN).build().perform();
 		    	Thread.sleep(3000);
 		    	 productcart.productClick();
 		    	  	 
@@ -160,7 +160,7 @@ public class ProductAddtoCartTest {
 			        	productcart = new ProductAddToCart(driver);
 				    	Thread.sleep(3000);
 			        	Actions actions= new Actions(driver);
-			        	actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+			        	//sendKeys(Keys.PAGE_DOWN).build().perform();
 			        	Thread.sleep(3000);
 			        	productcart.productQuantityIncrease();
 			        	WebElement quantityvalue = driver.findElement(By.name("quantity"));
@@ -196,7 +196,7 @@ public class ProductAddtoCartTest {
 					    	
 					    	productcart.UserHomeClick();
 					    	Thread.sleep(3000);
-					    	actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+					    	//sendKeys(Keys.PAGE_DOWN).build().perform();
 					    	 Thread.sleep(3000);
 					    	 productcart.secondproductClick();
 					    	
@@ -206,7 +206,7 @@ public class ProductAddtoCartTest {
 					    	RunReports.takeScreenShot(driver, System.getProperty("user.dir") + "/test-output/screenshots/TC0007A-image1.jpg");
 					    	 Assert.assertEquals( productBrandNameDisplayed,actualDisplay);
 					    	// Thread.sleep(3000);
-					    	actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+					    	//sendKeys(Keys.PAGE_DOWN).build().perform();
 					    	Thread.sleep(3000);
 					    	 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 					    	 productcart.secondproductAddClick();
