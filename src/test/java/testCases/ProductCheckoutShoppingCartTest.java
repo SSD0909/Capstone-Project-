@@ -110,7 +110,7 @@ public class ProductCheckoutShoppingCartTest {
 							        userLogin.EnterPass("Psssw0rd@#$123452345sfsff");
 							        System.out.println("Password Entered");
 							        Thread.sleep(5000);
-							      actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+							       actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 							       Thread.sleep(3000);
 							       userLogin.LoginUserClick();
 							       
@@ -128,7 +128,7 @@ public class ProductCheckoutShoppingCartTest {
 						        	
 							    	Thread.sleep(3000);
 							    	productcart.UserHomeClick();
-						        actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+						        	actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 						        	Thread.sleep(3000);
 						        	productcart.secondproductClick();
 						        	
@@ -147,23 +147,28 @@ public class ProductCheckoutShoppingCartTest {
 								    	 productcart.viewCartClick();
 								    	 
 								    	 
-								       actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+								        actions.sendKeys(Keys.PAGE_DOWN).build().perform();
 								        Thread.sleep(3000);
 										checkoutproduct.checkoutClick();
-										
+										RunReports.takeScreenShot(driver, System.getProperty("user.dir")
+								        		+ "/test-output/TC-0010A-image2.jpg");
 										Thread.sleep(3000);
+										RunReports.takeScreenShot(driver, System.getProperty("user.dir")
+								        		+ "/test-output/TC-0010A-image1.jpg");
+										
 										/*String checkoutExpected=checkoutproduct.checkoutTitle();
 										String actualDisplaycheckout="Checkout";
 										Assert.assertEquals( checkoutExpected,actualDisplaycheckout);*/
 										
 										String expectedurl = driver.getCurrentUrl();
+										Thread.sleep(3000);
 								        System.out.println(expectedurl);
-								        RunReports.takeScreenShot(driver, System.getProperty("user.dir") + "/test-output/TC-0010A-image1.jpg");
+								        
 								        String urlactual = "http://demo.perscholastraining.com/checkout/";
 								        Assert.assertEquals(expectedurl, urlactual);
-										
-										
+																
 										actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+										
 										boolean creditcardDisplay=	checkoutproduct.creditcardDisplay();
 										Assert.assertEquals(creditcardDisplay, true);
 											
@@ -182,18 +187,8 @@ public class ProductCheckoutShoppingCartTest {
 						        	test = extent.createTest("CheckoutProductInCart-0011", "Test Passed");
 						        	Actions actions= new Actions(driver);
 						        	checkoutproduct = new ProductCheckoutShoppingCart(driver);
-							    	
-									Thread.sleep(3000);
-									//String checkoutExpected=checkoutproduct.checkoutTitle();
-									//String actualDisplay="Checkout";
-									//Assert.assertEquals( checkoutExpected,actualDisplay);
-									//Thread.sleep(6000);
-									
-									/*String billingHeaderExpected=checkoutproduct.BillingHeader();
-									String actualbillingHeader="Billing Details";
-									Assert.assertEquals( billingHeaderExpected,actualbillingHeader);*/
-									//Thread.sleep(3000);
-						        	
+							    	Thread.sleep(3000);
+														        	
 									driver.findElement(By.id("billing_first_name")).clear();
 									driver.findElement(By.id("billing_last_name")).clear();
 									driver.findElement(By.id("billing_address_1")).clear();
@@ -204,74 +199,58 @@ public class ProductCheckoutShoppingCartTest {
 									driver.findElement(By.id("billing_email")).clear();
 									Thread.sleep(3000);
 									checkoutproduct.EnterFirstName("Sam");
-									System.out.println("FirstName Entered");
-									
-									
+									System.out.println("FirstName Entered");												
 									checkoutproduct.EnterLastName("Sammy");
-									System.out.println("LastName Entered");
-						        	
-									
+									System.out.println("LastName Entered");						        	
 									checkoutproduct.EnterAddress("123 SamStreet");
-									System.out.println("Address Entered");
-									
-									
+									System.out.println("Address Entered");											
 									checkoutproduct.EnterCity("Leander");
 									System.out.println("City Entered");
-									
 									Thread.sleep(3000);
 									//checkoutproduct.EnterState("Texas");
 									Select state = new Select(driver.findElement(By.id("billing_state")));
 									state.selectByVisibleText("Texas");
-									System.out.println("State Selected");
-									
-									
+									System.out.println("State Selected");			
 									checkoutproduct.EnterPostCode("78641");
-									System.out.println("PinCode Entered");
-									
-									
+									System.out.println("PinCode Entered");																
 									checkoutproduct.EnterPhone("5125370303");
-									System.out.println("Phone Entered");
-									
+									System.out.println("Phone Entered");									
 									checkoutproduct.EnterEmail("Stu4@gmail.com");
 									System.out.println("Email Entered");
-									 RunReports.takeScreenShot(driver, System.getProperty("user.dir") + "/test-output/screenshots/TC-0011A-image1.jpg");
-									driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-									
-									
+									 RunReports.takeScreenShot(driver, System.getProperty("user.dir") 
+											 + "/test-output/screenshots/TC-0011A-image1.jpg");
+									driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));				
 									checkoutproduct.iframe();
 									actions.sendKeys(Keys.PAGE_DOWN).build().perform();
-									
 									driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 									checkoutproduct.EntercardNumber("4242424242424242");
-									System.out.println("Card number Entered");
-									
+									System.out.println("Card number Entered");									
 									driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 									checkoutproduct.EntercardExpiry("05/26");
-									System.out.println("Card Expiry Entered");
-									
+									System.out.println("Card Expiry Entered");									
 									driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 									checkoutproduct.EntercardCVC("325");
 									System.out.println("Card CVC Entered");
-									RunReports.takeScreenShot(driver, System.getProperty("user.dir") + "/test-output/screenshots/TC-0011B-image1.jpg");
-
+									RunReports.takeScreenShot(driver, System.getProperty("user.dir") 
+											+ "/test-output/screenshots/TC-0011B-image1.jpg");
 									driver.switchTo().defaultContent();
 									Thread.sleep(3000);
 									checkoutproduct.Clickterms();
-									System.out.println("Terms Accepted");
-									 
+									System.out.println("Terms Accepted");									 
 									driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-									RunReports.takeScreenShot(driver, System.getProperty("user.dir") + "/test-output/screenshots/TC-0011C-image1.jpg");
+									RunReports.takeScreenShot(driver, System.getProperty("user.dir")
+											+ "/test-output/screenshots/TC-0011C-image1.jpg");
 									checkoutproduct.placeOrder();
 									Thread.sleep(5000);
-									//checking if the order displayed or not
 									
 									
+									//checking if the order displayed or not																	
 									boolean orderdisplay=driver.findElement(By.cssSelector("h1.entry-title")).isDisplayed();
 									Assert.assertEquals(orderdisplay,true);
-									RunReports.takeScreenShot(driver, System.getProperty("user.dir") + "/test-output/screenshots/TC-0011D-image1.jpg");
+									RunReports.takeScreenShot(driver, System.getProperty("user.dir")
+											+ "/test-output/screenshots/TC-0011D-image1.jpg");
 									String orderdisplayname=driver.findElement(By.cssSelector("h1.entry-title")).getText();
-									System.out.println(orderdisplayname);
-																
+									System.out.println(orderdisplayname);																
 									Thread.sleep(3000);
 									String expectedurl = driver.getCurrentUrl();
 									//System.out.println(expectedurl);
@@ -281,7 +260,8 @@ public class ProductCheckoutShoppingCartTest {
 									String actualOrder="Order received";
 									System.out.println(expectedDisplay);
 									Assert.assertEquals(expectedDisplay,actualOrder);
-									RunReports.takeScreenShot(driver, System.getProperty("user.dir") + "/test-output/screenshots/TC-0011E-image1.jpg");
+									RunReports.takeScreenShot(driver, System.getProperty("user.dir")
+											+ "/test-output/screenshots/TC-0011E-image1.jpg");
 									
 																	        	
 						        							        }
