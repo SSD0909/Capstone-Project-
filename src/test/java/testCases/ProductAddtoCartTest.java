@@ -70,8 +70,8 @@ public class ProductAddtoCartTest {
 	 @BeforeTest(enabled = true)
 	    public void launchBrowser() throws InterruptedException {
 	        driver = SelectBrowser.StartBrowser("Chrome");
-	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-	        Thread.sleep(5000);
+	        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	        //Thread.sleep(5000);
 	        driver.get("http://demo.perscholastraining.com/");
 	        Reporter.log("The browser is open the testing Application");
 	        
@@ -83,7 +83,7 @@ public class ProductAddtoCartTest {
 	        	test = extent.createTest("ViewCartPage_0008", "Test Passed");
 	        	Actions actions= new Actions(driver);
 	        	productcart = new ProductAddToCart(driver);
-		    	Thread.sleep(3000);
+		    	//Thread.sleep(3000);
 	        	productcart.viewCartClick();
 	        	
 	        	//Product Quantity List
@@ -138,7 +138,7 @@ public class ProductAddtoCartTest {
 			            	Assert.assertEquals(expectedName,actualName2 );
 			            }
 		        }
-				Thread.sleep(3000);
+				//Thread.sleep(3000);
 				
 				
 				
@@ -204,17 +204,17 @@ public class ProductAddtoCartTest {
 		        		test = extent.createTest("ProductPrice_0005", "Test Passed");
 		        	Actions actions= new Actions(driver);
 		        	userLogin = new LoginRegisteredUser(driver);
-		        	Thread.sleep(3000);
+		        	//Thread.sleep(3000);
 			    	userLogin.MyAccountBtnClick();
 			    	System.out.println("The My Account button is clicked");
 			       	userLogin.EnterUserEmail("Stu4@gmail.com");
 			        System.out.println("UserName Entered");
 			        userLogin.EnterPass("Psssw0rd@#$123452345sfsff");
 			        System.out.println("Password Entered");
-			       actions.sendKeys(Keys.PAGE_DOWN).build().perform();
-			       Thread.sleep(3000);
+			       //actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+			       //Thread.sleep(3000);
 			       userLogin.LoginUserClick();
-			        Thread.sleep(3000);
+			        //Thread.sleep(3000);
 			        System.out.println("Logged in Successfully");
 					driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			       System.out.println(userLogin.UserNameDisplay());
@@ -226,7 +226,7 @@ public class ProductAddtoCartTest {
 			        Assert.assertEquals( expectedDisplay,actualDisplay);
 			        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			         	productcart = new ProductAddToCart(driver);
-		    	Thread.sleep(3000);
+		    	//Thread.sleep(3000);
 		    	productcart.UserHomeClick();
 		    	  	
 		    	System.out.println("User is in HomePage");
@@ -246,9 +246,9 @@ public class ProductAddtoCartTest {
 		    	 
 		    	 
 		    	//productcart.UserHomeClick();
-		    	Thread.sleep(3000);
-		    	actions.sendKeys(Keys.PAGE_DOWN).build().perform();
-		    	Thread.sleep(3000);
+		    	//Thread.sleep(3000);
+		    	//actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+		    	//Thread.sleep(3000);
 		    	 productcart.productClick();
 		    	  	     	String actualpdtDisplay ="White Solo 2 Wireless";
 			    	String expectedProductName=productcart.ProductName();
@@ -269,10 +269,10 @@ public class ProductAddtoCartTest {
 			        try {
 			        	test = extent.createTest("ProductQuantityChange_0006", "Test Passed");
 			        	productcart = new ProductAddToCart(driver);
-				    	Thread.sleep(3000);
-			        	Actions actions= new Actions(driver);
+				    	//Thread.sleep(3000);
+			        	//Actions actions= new Actions(driver);
 			        	//actions.sendKeys(Keys.PAGE_DOWN).build().perform();
-			        	Thread.sleep(3000);
+			        	//Thread.sleep(3000);
 			        	productcart.productQuantityIncrease();
 			        	WebElement quantityvalue = driver.findElement(By.name("quantity"));
 			            System.out.println(quantityvalue.getAttribute("value")); 
@@ -294,12 +294,12 @@ public class ProductAddtoCartTest {
 				    				    public void VerifyProductCartPage() throws IOException, InterruptedException {
 				        try {
 				        	test = extent.createTest("VerifyProductCartPage_0007", "Test Passed");
-				        	Actions actions= new Actions(driver);
+				        	//Actions actions= new Actions(driver);
 				        	productcart = new ProductAddToCart(driver);
 					    	productcart.UserHomeClick();
-					    	Thread.sleep(3000);
+					    	//Thread.sleep(3000);
 					    	//actions.sendKeys(Keys.PAGE_DOWN).build().perform();
-					    	 Thread.sleep(3000);
+					    	 //Thread.sleep(3000);
 					    	 productcart.secondproductClick();
 					    	String productBrandNameDisplayed=productcart.productBrandNameDisplay();
 				        	String actualDisplay ="Tablet Red EliteBook Revolve 810 G2";
@@ -313,10 +313,10 @@ public class ProductAddtoCartTest {
 					    	 
 					    	// Thread.sleep(3000);
 					    	//actions.sendKeys(Keys.PAGE_DOWN).build().perform();
-					    	Thread.sleep(3000);
+					    	//Thread.sleep(3000);
 					    	 //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 					    	 productcart.secondproductAddClick();
-					    	 Thread.sleep(3000);
+					    	 //Thread.sleep(3000);
 					    	 String secondproductAddedMessage=productcart.secondproductAddedDisplay();
 					    	 RunReports.takeScreenShot(driver, System.getProperty("user.dir")
 					    			 + "/test-output/screenshots/TC0007B-image1.jpg");
